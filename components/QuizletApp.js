@@ -63,7 +63,41 @@ const QuizletApp = () => {
             <option value="long">Long Answer</option>
           </select>
           {newType === "multiple" && (
-            <div>              <input                type="text"                value={newAnswer}                onChange={(e) => setNewAnswer(e.target.value)}                placeholder="Add an option"              />              <button onClick={addOption}>Add Option</button>              <ul>                {newOptions.map((option, index) => (                  <li key={index}>{option}</li>                ))}              </ul>              <input                type="text"                value={newCorrectAnswer}                onChange={(e) => setNewCorrectAnswer(e.target.value)}                placeholder="Correct answer"              />            </div>          )}          {newType !== "multiple" && (            <input              type="text"              value={newAnswer}              onChange={(e) => setNewAnswer(e.target.value)}              placeholder="Add an answer"            />          )}          <button onClick={addQuestion}>Add Question</button>          <ul>            {questions.map((qa, index) => (              <li key={index}>                <strong>Q:</strong> {qa.question} <br />                <strong>A:</strong> {qa.answer}
+            <div>
+              <input
+                type="text"
+                value={newAnswer}
+                onChange={(e) => setNewAnswer(e.target.value)}
+                placeholder="Add an option"
+              />
+              <button onClick={addOption}>Add Option</button>
+              <ul>
+                {newOptions.map((option, index) => (
+                  <li key={index}>{option}</li>
+                ))}
+              </ul>
+              <input
+                type="text"
+                value={newCorrectAnswer}
+                onChange={(e) => setNewCorrectAnswer(e.target.value)}
+                placeholder="Correct answer"
+              />
+            </div>
+          )}
+          {newType !== "multiple" && (
+            <input
+              type="text"
+              value={newAnswer}
+              onChange={(e) => setNewAnswer(e.target.value)}
+              placeholder="Add an answer"
+            />
+          )}
+          <button onClick={addQuestion}>Add Question</button>
+          <ul>
+            {questions.map((qa, index) => (
+              <li key={index}>
+                <strong>Q:</strong> {qa.question} <br />
+                <strong>A:</strong> {qa.answer}
               </li>
             ))}
           </ul>
@@ -81,7 +115,9 @@ const QuizletApp = () => {
                     ))}
                   </ul>
                 ) : (
-                  <strong>A:</strong> {qa.answer}
+                  <>
+                    <strong>A:</strong> {qa.answer}
+                  </>
                 )}
               </li>
             ))}
