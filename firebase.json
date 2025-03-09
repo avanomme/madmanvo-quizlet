@@ -1,0 +1,30 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "emulators": {
+    "auth": {
+      "port": 5199
+    },
+    "firestore": {
+      "port": 5100
+    },
+    "hosting": {
+      "port": 5101
+    },
+    "ui": {
+      "enabled": true,
+      "port": 5102
+    },
+    "singleProjectMode": true
+  }
+}
