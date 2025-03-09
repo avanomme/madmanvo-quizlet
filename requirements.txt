@@ -1,0 +1,5 @@
+Flask==2.0.1
+Werkzeug==2.0.1
+dot2tex==2.11.3
+graphviz
+# Add any other dependencies your project needs:x

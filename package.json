@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@viz-js/viz": "^3.9.0",
+    "express": "^4.21.1",
+    "flask": "^0.2.10",
+    "python-shell": "^5.0.0",
+    "viz.js": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.5",
+    "typescript": "^5.6.3"
+  },
+  "name": "mvo-website",
+  "version": "1.0.0",
+  "main": "viz.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
