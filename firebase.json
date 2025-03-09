@@ -1,8 +1,4 @@
 {
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
   "hosting": {
     "public": "public",
     "ignore": [
@@ -11,20 +7,16 @@
       "**/node_modules/**"
     ]
   },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
   "emulators": {
-    "auth": {
-      "port": 5199
-    },
-    "firestore": {
-      "port": 5100
-    },
-    "hosting": {
-      "port": 5101
-    },
-    "ui": {
-      "enabled": true,
-      "port": 5102
-    },
+    "firestore": { "host": "127.0.0.1", "port": 5100 },
+    "hosting": { "host": "127.0.0.1", "port": 5101 },
+    "ui": { "enabled": true },
     "singleProjectMode": true
   }
 }
+}
+
